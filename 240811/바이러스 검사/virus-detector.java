@@ -10,13 +10,11 @@ public class Main {
         int leader = Integer.parseInt(tokenizer.nextToken());
         int member = Integer.parseInt(tokenizer.nextToken());
 
-        int admins = 0;
+        int admins = n;
         for(int i = 0; i < n; i++) {
             int customer = customers[i] - leader;
             if(customer > 0) {
-                admins = (customer % member == 0) ? customer / member + 1 : customer / member + 2;
-            } else {
-                admins++;
+                admins = (customer % member == 0) ? customer / member : customer / member + 1;
             }
         }
         System.out.print(admins);
