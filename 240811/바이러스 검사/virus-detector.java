@@ -14,7 +14,7 @@ public class Main {
         for(int i = 0; i < n; i++) {
             int customer = customers[i] - leader;
             if(customer > 0) {
-                admins = (customer % member == 0) ? customer / member : customer / member + 1;
+                admins += (customer % member == 0) ? customer / member : customer / member + 1;
             }
         }
         System.out.print(admins);
