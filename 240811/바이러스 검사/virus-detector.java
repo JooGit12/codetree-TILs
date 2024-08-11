@@ -10,7 +10,7 @@ public class Main {
         int leader = Integer.parseInt(tokenizer.nextToken());
         int member = Integer.parseInt(tokenizer.nextToken());
 
-        int admins = n;
+        long admins = n;
         for(int i = 0; i < n; i++) {
             int customer = customers[i] - leader;
             if(customer > 0) {
